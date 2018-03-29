@@ -7,20 +7,26 @@ Simple CPD CRUD Application using spring-boot and kafka
     - apache maven
     - IDE
     - mongodb installed in PC
+    - kafka installed
 
-- run mongodb:
+- run mongodb on windows:
     - open run (`window + r`)
     - type `mongod --dbpath C:\data`
-
+    
+- run mongodb on linux:
+	- type `mongod`
+	
 - run zookeper: `zkserver` in command prompt or terminal
 
-- run kafka: `.\bin\windows\kafka-server-start.bat .\config\server.properties`
+- run kafka: `.\bin\kafka-server-start.sh .\config\server.properties`
+
+- run confluent kafka: `.\bin\confluent start schema-registry`
 
 - show producer and consumer in directory windows in kafka\bin directory:
   - producer:
-      `kafka-console-producer.bat --broker-list localhost:9092 --topic [topic-name]`
+      `kafka-console-producer.sh --broker-list localhost:9092 --topic [topic-name]`
   - consumer:
-      `kafka-console-consumer.bat --zookeeper localhost:2181 --topic [topic-name]`
+      `kafka-console-consumer.sh --zookeeper localhost:2181 --topic [topic-name]`
 
 - running application
     - make sure zookeeper, kafka, mongodb is running
