@@ -1,8 +1,7 @@
 spring:
   data:
     mongodb:
-      uri:  mongodb://localhost:27017/test
-      
+      uri:  mongodb://localhost:27017/test   
   kafka:
     bootstrap-servers: localhost:9092
 
@@ -20,3 +19,35 @@ logging:
     root: ERROR
     org.springframework.web: ERROR
     com.cotiviti.enterprise.cpd: INFO
+info:
+  app:
+    name: CPD Microsewrvices Application
+    description:  This is a template for working microservices with kafka and mongo
+    version: 0.0.1-SNAPSHOT
+ 
+management:
+  health:
+    jms:
+      enabled: true
+  metrics:
+    enable: 
+      all: true
+    binders:
+      jvm:
+        enabled: true
+  endpoint:
+    beans:
+      enabled: true
+    configprops:
+      enabled: true
+    metrics:
+      enabled: true
+    env:
+      enabled: true
+    sessions:
+      enabled: true
+    logfile:
+      enabled: true
+    health:
+      show-details: always
+  
